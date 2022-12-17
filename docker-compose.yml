@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   docker1_php7:
+    restart: always
     build:
       context: './php/'
       args:
@@ -12,6 +13,7 @@ services:
       - ./php/php.ini:/usr/local/etc/php/php.ini
     container_name: docker1_php7
   docker1_apache2:
+    restart: always
     build:
       context: './apache/'
       args:
